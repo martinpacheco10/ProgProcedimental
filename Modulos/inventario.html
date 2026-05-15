@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    
+
+
+    <title>Formulario Productos</title>
+
+    <style>
+        body {
+            background-color: #f4f6f9;
+        }
+
+        .caja-formulario {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 700px;
+            margin: auto;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            color: #3273dc;
+        }
+
+        .button {
+            margin-top: 10px;
+        }
+
+        .input:focus,
+        .textarea:focus,
+        .select select:focus {
+            border-color: #3273dc;
+            box-shadow: 0 0 5px rgba(50, 115, 220, 0.3);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="section">
+
+        <div class="caja-formulario">
+
+            <h1 class="title has-text-centered">
+                <i class="fas fa-box"></i>
+                Registro de Productos
+            </h1>
+
+           
+            <div class="field">
+                <label class="label">Código Producto</label>
+
+                <div class="control has-icons-left">
+                    <input class="input" type="text" placeholder="Ingrese código">
+
+                    <span class="icon is-left">
+                        <i class="fas fa-barcode"></i>
+                    </span>
+                </div>
+            </div>
+
+          
+            <div class="field">
+                <label class="label">Nombre Producto</label>
+
+                <div class="control has-icons-left">
+                    <input class="input" type="text" placeholder="Ingrese nombre">
+
+                    <span class="icon is-left">
+                        <i class="fas fa-box-open"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Cantidad</label>
+
+                <div class="control has-icons-left">
+                    <input class="input" type="number" placeholder="Ingrese cantidad">
+
+                    <span class="icon is-left">
+                        <i class="fas fa-sort-numeric-up"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Descripción</label>
+
+                <div class="control">
+                    <textarea class="textarea" placeholder="Ingrese descripción"></textarea>
+                </div>
+            </div>
+
+         
+            <div class="field">
+                <label class="label">Marca</label>
+
+                <div class="control has-icons-left">
+                    <input class="input" type="text" placeholder="Ingrese marca">
+
+                    <span class="icon is-left">
+                        <i class="fas fa-tag"></i>
+                    </span>
+                </div>
+            </div>
+
+          
+            <div class="field">
+                <label class="label">Valor Unitario</label>
+
+                <div class="control has-icons-left">
+                    <input class="input" type="number" placeholder="Ingrese valor">
+
+                    <span class="icon is-left">
+                        <i class="fas fa-dollar-sign"></i>
+                    </span>
+                </div>
+            </div>
+
+           
+            <div class="field">
+                <label class="label">Categoría</label>
+
+                <div class="control">
+                    <div class="select is-fullwidth">
+                        <select>
+                            <option>Seleccione categoría</option>
+                            <option>Tecnología</option>
+                            <option>Hogar</option>
+                            <option>Ropa</option>
+                            <option>Alimentos</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Ubicación</label>
+
+                <div class="control has-icons-left">
+                    <input class="input" type="text" placeholder="Ingrese ubicación">
+
+                    <span class="icon is-left">
+                        <i class="fas fa-location-dot"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <button class="button is-link is-fullwidth">
+                        <i class="fas fa-save"></i>
+                        &nbsp; Guardar Producto
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="control is-expanded">
+            <button type="reset" class="button is-light is-fullwidth">
+                <i class="fas fa-eraser"></i>&nbsp;
+                Limpiar
+            </button>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
