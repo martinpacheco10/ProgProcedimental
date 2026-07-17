@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <title>Formulario Finanzas</title>
+
+    <style>
+        body {
+            background-color: #f4f6f9;
+        }
+
+        .caja-formulario {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 700px;
+            margin: auto;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            color: #3273dc;
+        }
+
+        .button {
+            margin-top: 10px;
+        }
+
+        .input:focus,
+        .textarea:focus,
+        .select select:focus {
+            border-color: #3273dc;
+            box-shadow: 0 0 5px rgba(50, 115, 220, 0.3);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="section">
+
+        <div class="caja-formulario">
+
+            <h1 class="title has-text-centered">
+                <i class="fas fa-money-bill-wave"></i>
+                Registro Financiero
+            </h1>
+
+            <!-- Tipo Movimiento -->
+            <div class="field">
+                <label class="label">Tipo de Movimiento</label>
+
+                <div class="control">
+                    <div class="select is-fullwidth">
+                        <select id="tipoMovimiento">
+                            <option>Seleccione una opción</option>
+                            <option>Ingreso</option>
+                            <option>Egreso</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Valor -->
+            <div class="field">
+                <label class="label">Valor</label>
+
+                <div class="control has-icons-left">
+                    <input class="input" type="number" id="valor" placeholder="Ingrese valor">
+                    <span class="icon is-left">
+                        <i class="fas fa-dollar-sign"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Concepto -->
+            <div class="field">
+                <label class="label">Concepto</label>
+
+                <div class="control has-icons-left">
+                    <input class="input" type="text" id="concepto" placeholder="Ingrese concepto">
+
+                    <span class="icon is-left">
+                        <i class="fas fa-file-alt"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Fecha -->
+            <div class="field">
+                <label class="label">Fecha</label>
+
+                <div class="control has-icons-left">
+                    <input class="input" type="date" id="fecha">
+
+                    <span class="icon is-left">
+                        <i class="fas fa-calendar"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Descripción -->
+            <div class="field">
+                <label class="label">Descripción</label>
+
+                <div class="control">
+                    <textarea class="textarea" id="descripcion" placeholder="Ingrese descripción"></textarea>
+                </div>
+            </div>
+
+            <!-- Botón Guardar -->
+            <div class="field">
+                <div class="control">
+                    <button onclick="ValidarDatos()" class="button is-link is-fullwidth"></button>
+                </div>
+            </div>
+
+            <!-- Botón Limpiar -->
+            <div class="field">
+                <div class="control">
+                    <button type="reset" class="button is-light is-fullwidth">
+                        <i class="fas fa-eraser"></i>
+                        &nbsp; Limpiar
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="contabilidad.js"></script>
+
+</body>
+
+</html>
