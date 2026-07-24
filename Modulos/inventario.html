@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bulma CSS -->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
 
-    <!-- Font Awesome -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <title>Formulario Pedidos</title>
+
+
+
+    <title>Formulario Productos</title>
 
     <style>
         body {
@@ -36,6 +39,7 @@
         }
 
         .input:focus,
+        .textarea:focus,
         .select select:focus {
             border-color: #3273dc;
             box-shadow: 0 0 5px rgba(50, 115, 220, 0.3);
@@ -46,60 +50,47 @@
 
 <body>
 
+
     <section class="section">
 
         <div class="caja-formulario">
 
             <h1 class="title has-text-centered">
-                <i class="fas fa-cart-shopping"></i>
-                Registro de Pedidos
+                <i class="fas fa-box"></i>
+                Registro de Productos
             </h1>
 
-            <!-- Producto -->
+
             <div class="field">
-                <label class="label">Producto</label>
+                <label class="label">Código Producto</label>
 
                 <div class="control has-icons-left">
-                    <input class="input" type="text" id="producto" placeholder="Ingrese producto">
+                    <input class="input" type="text" id="codigoProducto" placeholder="Ingrese código">
 
                     <span class="icon is-left">
-                        <i class="fas fa-box"></i>
+                        <i class="fas fa-barcode"></i>
                     </span>
                 </div>
             </div>
 
-            <!-- Dirección -->
+
             <div class="field">
-                <label class="label">Dirección</label>
+                <label class="label">Nombre Producto</label>
 
                 <div class="control has-icons-left">
-                    <input class="input" type="text" id="direccion" placeholder="Ingrese dirección">
+                    <input class="input" type="text" id="nombreProducto" placeholder="Ingrese nombre">
 
                     <span class="icon is-left">
-                        <i class="fas fa-location-dot"></i>
+                        <i class="fas fa-box-open"></i>
                     </span>
                 </div>
             </div>
 
-            <!-- Nombre Usuario -->
-            <div class="field">
-                <label class="label">Nombre de Usuario</label>
-
-                <div class="control has-icons-left">
-                    <input class="input" type="text" id="nombreUsuario" placeholder="Ingrese nombre">
-
-                    <span class="icon is-left">
-                        <i class="fas fa-user"></i>
-                    </span>
-                </div>
-            </div>
-
-            <!-- Cantidad -->
             <div class="field">
                 <label class="label">Cantidad</label>
 
                 <div class="control has-icons-left">
-                    <input class="input" type="number" id="cantidad" placeholder="Ingrese cantidad">
+                    <input class="input" type="number" id="cantidadProducto" placeholder="Ingrese cantidad">
 
                     <span class="icon is-left">
                         <i class="fas fa-sort-numeric-up"></i>
@@ -107,70 +98,87 @@
                 </div>
             </div>
 
-            <!-- Método de Pago -->
             <div class="field">
-                <label class="label">Método de Pago</label>
+                <label class="label">Descripción</label>
 
                 <div class="control">
-                    <div class="select is-fullwidth">
-                        <select id="metodoPago">
-                            <option>Seleccione método</option>
-                            <option>Efectivo</option>
-                            <option>Tarjeta</option>
-                            <option>Transferencia</option>
-                            <option>Nequi</option>
-                        </select>
-                    </div>
+                    <textarea class="textarea" id="descripcionProducto" placeholder="Ingrese descripción"></textarea>
                 </div>
             </div>
 
-            <!-- Pago -->
+
             <div class="field">
-                <label class="label">Pago</label>
+                <label class="label">Marca</label>
 
                 <div class="control has-icons-left">
-                    <input class="input" type="number" id="valorCancelar" placeholder="Ingrese valor del pago">
+                    <input class="input" type="text" id="marcaProducto" placeholder="Ingrese marca">
+
+                    <span class="icon is-left">
+                        <i class="fas fa-tag"></i>
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="field">
+                <label class="label">Valor Unitario</label>
+
+                <div class="control has-icons-left">
+                    <input class="input" type="number" id="valorUnitario" placeholder="Ingrese valor">
+
                     <span class="icon is-left">
                         <i class="fas fa-dollar-sign"></i>
                     </span>
                 </div>
             </div>
 
-            <!-- Teléfono -->
+
             <div class="field">
-                <label class="label">Teléfono</label>
+                <label class="label">Categoría</label>
+
+                <div class="control">
+                    <div class="select is-fullwidth">
+                        <select id="categoriaProducto">
+                            <option>Seleccione categoría</option>
+                            <option>Tecnología</option>
+                            <option>Hogar</option>
+                            <option>Ropa</option>
+                            <option>Alimentos</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Ubicación</label>
 
                 <div class="control has-icons-left">
-                    <input class="input" type="tel" id="telefono" placeholder="Ingrese teléfono">
+                    <input class="input" type="text" id="ubicacionProducto" placeholder="Ingrese ubicación">
+
                     <span class="icon is-left">
-                        <i class="fas fa-phone"></i>
+                        <i class="fas fa-location-dot"></i>
                     </span>
                 </div>
             </div>
 
-            <!-- Botón Guardar -->
             <div class="field">
                 <div class="control">
-                    <button onclick="ValidarDatos()" class="button is-link is-fullwidth"></button>
-                </div>
-            </div>
-
-            <!-- Botón Limpiar -->
-            <div class="field">
-                <div class="control">
-                    <button type="reset" class="button is-light is-fullwidth">
-
-                        <i class="fas fa-eraser"></i>
-                        &nbsp; Limpiar
+                    <button class="button is-link is-fullwidth">
+                        <i class="fas fa-save"></i>
+                        &nbsp; Guardar Producto
                     </button>
                 </div>
             </div>
 
         </div>
 
+        <div class="control is-expanded">
+            <button onclick="ValidarDatos()" class="button is-link is-fullwidth"></button>
+        </div>
+
     </section>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="pedido.js"></script>
+    <script src="../js/inventario.js"></script>
 
 </body>
 
